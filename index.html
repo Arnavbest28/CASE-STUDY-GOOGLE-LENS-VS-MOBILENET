@@ -1,0 +1,313 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="bg.jpg">
+    <center>
+        <h3 class="heading">GOOGLE LENS / VS \ MOBILENET</h3>
+          <hr><hr>
+               <h6> Case Study Of Google Lens & Mobile-Net</h6>
+            <br> <br>
+                  <h1 class="btn btn-danger ti"><b>TEST IMAGES</b></h1>
+                  <br>
+
+                  <div id="md">
+  
+                  <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+  
+                  <br><br>
+  
+                <label><text id="result_para_tag">Object: </text>
+                
+    <span id="result_object_name"></span> 
+
+
+
+    <br><br>
+
+
+
+    <label><text id="result_para_tag">Accuracy: </text>
+                
+      <span id="result_object_accuracy"></span> 
+  </label><br></div>
+                <br>
+                  <h1 class="one"> <img id="fi" src="permanent-marker.jpeg"  width="50" height="350"></h1>
+
+                  <div id="fd">
+
+                    
+
+                  <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                  <br><br>
+
+                <label>Object: Permanent Marker</label><br></div>
+
+                <br><br>
+                
+                <label id="break">--</label>
+
+                <br>
+                <div id="sd">
+                  <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                  <br><br>
+
+                <label>Object: Microphone , Mike</label><br></div>
+                <label id="break1">--</label><br>
+                <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+
+
+
+               
+                <h1 class="one"> <img id="si" src="WhatsApp Image 2022-01-17 at 4.12.14 PM.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Mask</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Mouse</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+              <br><br>
+
+
+              <h1 class="one"> <img id="si" src="notebook.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Note Book</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Pocket Book</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+                  
+
+
+
+              <h1 class="one"> <img id="si" src="ok.jpg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Cap</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Lofer</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+
+
+
+              <h1 class="one"> <img id="si" src="shuttle.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: YONEX Shuttle Cock</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Strainer</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+
+              
+              <h1 class="one"> <img id="si" src="20220117_154744.jpg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Computer Mouse</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Computer Mouse</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens and Mobile-Net, both were accurate</label>
+
+              <h1 class="one"> <img id="si" src="WhatsApp Image 2022-01-17 at 4.08.35 PM.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Ball</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Ball</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens and Mobile-Net, both were accurate</label>
+
+
+
+
+              
+
+              <h1 class="one"> <img id="si" src="WhatsApp Image 2022-01-18 at 16.38.37.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Spectacles</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Sun Glasses</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+
+
+
+
+              <h1 class="one"> <img id="ti" src="WhatsApp Image 2022-01-18 at 16.49.59.jpeg " width="80" height="350"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Ruler</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Ruler</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, both Google Lens & Mobile-Net were accurate</label>
+
+              
+              
+              <h1 class="one"> <img id="si" src="WhatsApp Image 2022-01-18 at 16.47.50.jpeg"  width="130" height="250"></h1>
+
+                <div id="fd">
+
+                <label><u><i>Output On <b>GOOGLE LENS</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Rubber Band</label><br></div>
+
+              <br><br>
+              
+              <label id="break">--</label>
+
+              <br><div id="sd">
+
+                <label><u><i>Output On <b>MOBILE NET</b></i></u></label>
+
+                <br><br>
+
+              <label>Object: Stethoscope</label><br></div>
+              <label id="break1">--</label><br>
+              <label class="c1">In this case, Google Lens was much accurate than Mobile-Net</label>
+        </center>    
+        
+       
+    </center>
+    <br><br>
+    <label id="db"><b>Developed By:</b> Tech_Arnav</label>
+    <script src="main.js"></script>
+</body>
